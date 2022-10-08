@@ -26,7 +26,7 @@ def remove_files():
         os.system('rm -rf /opt/wine*')
         os.system('rm -rf /usr/bin/wine')
         os.system(f'rm -rf {HOME}/.cache/wine')
-        os.system(f'rm -rf {HOME}/.local/share/applications/wine')
+        os.system(f'rm -rf {HOME}/.local/share/applications/wine*')
         os.system(f'rm -rf {HOME}/.wine')
         os.system('rm -rf /usr/share/bash-completion/completions/wine')
         os.system('rm -rf /etc/apt/keyrings/winehq-archive.key')
