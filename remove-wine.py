@@ -16,7 +16,7 @@ def remove_from_packages():
         os.system('apt-get purge wine -y')
         os.system('apt autoremove -y')
         os.system('apt-get update')
-        os.system('apt-get upgrade')
+        os.system('apt-get upgrade -y')
     except:
         print(f"\n{RED} Failed on remove packages! \n")
 
@@ -30,6 +30,7 @@ def remove_files():
         os.system(f'rm -rf {HOME}/.wine')
         os.system('rm -rf /usr/share/bash-completion/completions/wine')
         os.system('rm -rf /etc/apt/keyrings/winehq-archive.key')
+        os.system('rm -rf /etc/apt/sources.list.d/wine*')
 
     except:
         print(f"\n{RED} Failed on remove files! \n")
